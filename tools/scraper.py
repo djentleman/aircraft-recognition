@@ -1,7 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 from settings import (
-    aircraft_types
+    aircraft_types,
+    scraper_wait_time
 )
 import json
 import time
@@ -32,7 +33,7 @@ def scrape_images():
             # max 10 pages of photos per plane for now
             if page_id > 10:
                 break
-            time.sleep(5) # be nice
+            time.sleep(scraper_wait_time) # be nice
         aircraft_hash[aircraft] = photo_urls
     output = json.dumps(aircraft_hash)
     open('aircraft_photos.json', 'w+').write(output)

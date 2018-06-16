@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+scraper_wait_time = 15
+
 # scraped from jetphotos.com
 aircraft_types = [
 	'Aérospatiale/British Aircraft Corporation Concorde',
