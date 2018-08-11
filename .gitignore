@@ -105,3 +105,4 @@ venv.bak/
 
 # images
 *.jpg
+training_data.csv
